@@ -1,0 +1,60 @@
+
+html {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 1440px;
+    height: 848px;
+
+	margin: 48px 0;
+	padding: 100px 156px;
+
+    background-color: rgb(94, 13, 13);
+}
+
+img {
+	display: block;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.gallery__image {
+    width: 360px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.widget {
+    margin: 24px 0;
+}
+
+.color {
+    color: black;
+}
