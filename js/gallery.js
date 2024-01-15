@@ -1,5 +1,3 @@
-
-
 import {images} from './images.js'
 
 const galleryContainerEl = document.querySelector('.gallery');
@@ -32,21 +30,19 @@ function onModalOpen(evt) {
   }
 
   const instanceImage = basicLightbox.create(`
-    <img src="${evt.target.dataset.source}" width="1112" height="640">
+    <img src='${evt.target.dataset.source}' width='1112' height='640'>
 `);
 
   instanceImage.show();
 
-  if (instanceImage.visible()) {
-    document.addEventListener("keydown", onKeyPressEsc);
-  }
-
-  function onKeyPressEsc(evt) {
-    if (evt.code === "Escape") {
-      instanceImage.close();
-      document.removeEventListener("keydown", onKeyPressEsc);
+  document.addEventListener('keydown', onModalClose);
+  
+  function onModalClose(evt) { //onKeyPressEsc I've changed the function name to onModalClose
+    instanceImage.close();
+    document.removeEventListener('keydown', onModalClose);
     }
-  }
 }
+
+
 
 
